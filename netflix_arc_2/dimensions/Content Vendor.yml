@@ -1,0 +1,36 @@
+unique_name: Content Vendor
+object_type: dimension
+label: Content Vendor
+type: standard
+
+hierarchies:
+
+  - unique_name: Content Vendor
+    label: Content Vendor
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: content_vendor
+
+        secondary_attributes:
+
+          - unique_name: d_CONTENT_VENDOR_NAME
+            label: Content Vendor Name
+            folder: Content - Deal Attributes
+            dataset: CONTENT_VENDOR_D
+            name_column: CONTENT_VENDOR_NAME
+            key_columns:
+              - CONTENT_VENDOR_NAME
+            sort_column: CONTENT_VENDOR_NAME
+
+level_attributes:
+
+  - unique_name: content_vendor
+    label: Content Vendor
+    is_unique_key: true
+    dataset: CONTENT_VENDOR_D
+    name_column: CONTENT_VENDOR_ID
+    key_columns:
+      - CONTENT_VENDOR_ID

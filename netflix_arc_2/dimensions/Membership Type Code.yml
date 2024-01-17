@@ -1,0 +1,32 @@
+unique_name: Membership Type Code
+object_type: dimension
+label: Membership Type Code
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: Membership Type
+    label: Membership Type
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Membership Type Code Level
+
+        aliases:
+
+          - unique_name: m_MEMBERSHIP_TYPE_CODE
+            label: Playback Membership Type
+            folder: Content - Playback Attributes
+            dataset: PLAYBACK_SESSION_F
+            name_column: MEMBERSHIP_TYPE_CODE
+            sort_column: MEMBERSHIP_TYPE_CODE
+
+level_attributes:
+
+  - unique_name: Membership Type Code Level
+    label: Membership Type
+    dataset: PLAYBACK_SESSION_F
+    name_column: MEMBERSHIP_TYPE_CODE
+    key_columns:
+      - MEMBERSHIP_TYPE_CODE

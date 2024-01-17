@@ -1,0 +1,33 @@
+unique_name: BATCH_D
+object_type: dataset
+label: BATCH_D
+connection_id: DSE
+table: BATCH_D
+
+columns:
+  - name: BATCH_DESC
+    data_type: string
+  - name: BATCH_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: BATCH_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: BATCH_ID
+    data_type: "decimal(38,0)"
+  - name: BATCH_RESOLVED_CONTENT_RUNTIME_SECS
+    data_type: double
+  - name: BATCH_RESOLVED_EPISODE_CNT
+    data_type: "decimal(38,0)"
+  - name: BATCH_RESOLVED_RUNTIME_SECS
+    data_type: double
+  - name: BATCH_RESOLVED_SEQUENCE_NBR
+    data_type: "decimal(38,0)"
+  - name: BATCH_TYPE_CODE
+    data_type: string
+  - name: IS_BATCH_LAUNCHED_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: IS_LAUNCH_BATCHED_IN_PRODUCT
+    data_type: "decimal(38,0)"
+  - name: SEASON_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_ID
+    data_type: "decimal(38,0)"

@@ -1,0 +1,462 @@
+unique_name: arc
+object_type: model
+label: ARC-Account
+include_default_drillthrough: true
+
+relationships:
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Geo_1
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - SIGNUP_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Account_Date_Relationship
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - ACCOUNT_ID
+        - SIGNUP_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Date_1
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - SIGNUP_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Customer
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - ACCOUNT_ID
+    to:
+      dimension: Customer
+      level: Account Level
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content_Country_Relationship_1
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+        - SIGNUP_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: batch_country
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content_1
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+    to:
+      dimension: Content
+      level: batch
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content_Country_Date_Relationship_1
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+        - SIGNUP_COUNTRY_ID
+        - SIGNUP_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Batch Country Date
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Account_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Customer
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+    to:
+      dimension: Customer
+      level: Account Level
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - BATCH_ID
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: batch_country
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - BATCH_ID
+    to:
+      dimension: Content
+      level: batch
+
+  - unique_name: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_ACCOUNT_SUM
+      join_columns:
+        - BATCH_ID
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Batch Country Date
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - SHOW_ID
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Show Country Date
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Account_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Customer
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+    to:
+      dimension: Customer
+      level: Account Level
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - SHOW_ID
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: show_country
+
+  - unique_name: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_ACCOUNT_SUM
+      join_columns:
+        - SHOW_ID
+    to:
+      dimension: Content
+      level: show
+
+  - unique_name: PLAYBACK_SESSION_F_Account_Date_Relationship
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - ACCOUNT_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: PLAYBACK_SESSION_F_Date
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: PLAYBACK_SESSION_F_Content_Country_Relationship
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - TITLE_ID
+        - PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: title_country
+
+  - unique_name: PLAYBACK_SESSION_F_Content_Country_Date_Relationship
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - TITLE_ID
+        - PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Title Country Date
+
+  - unique_name: PLAYBACK_SESSION_F_Content
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+
+  - unique_name: PLAYBACK_SESSION_F_Title_Deal_Window
+    from:
+      dataset: PLAYBACK_SESSION_F
+      join_columns:
+        - DEAL_ATTRIBUTE_ID
+    to:
+      dimension: Title Deal Window
+      level: title_deal_window
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Account_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - TITLE_ID
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: title_country
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - TITLE_ID
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Title Country Date
+
+  - unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Account_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - ACCOUNT_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Account Date Relationship
+      level: Account Date Relationship
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - SEASON_ID
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Season Country Date
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - SEASON_ID
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: season_country
+
+  - unique_name: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_ACCOUNT_SUM
+      join_columns:
+        - SEASON_ID
+    to:
+      dimension: Content
+      level: season
+
+dimensions:
+  - Is_Cached_Playback_1
+  - Membership Type Code
+
+metrics:
+
+  - unique_name: AVS_Vote_Amount_1
+    folder: Content Performance Metrics
+
+  - unique_name: m_batch_completer_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_batch_starter_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_batch_sticker_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: Content_View_Secs_1
+    folder: Content Performance Metrics
+
+  - unique_name: m_EIA_ESTIMATE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_p1_avs1_vote_amt_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_season_completer_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_season_starter_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_season_sticker_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_show_completer_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_show_starter_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_show_sticker_count_sum
+    folder: Content Performance Metrics
+
+  - unique_name: Sqpd_Vote_Amount_1
+    folder: Content Performance Metrics
+
+dataset_properties:
+  PLAYBACK_SESSION_F:
+    allow_aggregates: false
+
+perspectives:
+
+  - unique_name: ARC Account Test
+
+    dimensions:
+
+      - name: Buying Team
+        visible: false
+
+      - name: Geo
+        hierarchies:
+          - name: finance_subregion_geo
+            visible: false
+          - name: estaff_subregion_geo
+            visible: false
+
+      - name: Billing Partner
+        visible: false
+
+overrides:
+  AVS_Vote_Amount_1:
+    query_name: m_avs_vote_amt_sum
+  Is_Cached_Playback_1:
+    query_name: Is Cached Playback
+  Sqpd_Vote_Amount_1:
+    query_name: m_sqpd_vote_amt_sum
+  Content_View_Secs_1:
+    query_name: m_content_view_secs_sum

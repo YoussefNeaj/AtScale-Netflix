@@ -1,0 +1,6 @@
+unique_name: m_SHOW_STICKER_CNT_sum
+object_type: metric
+label: Show Sticker Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SHOW_SUM
+column: SHOW_STICKER_CNT

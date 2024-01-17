@@ -1,0 +1,36 @@
+unique_name: Progamming Category
+object_type: dimension
+label: Progamming Category
+type: standard
+
+hierarchies:
+
+  - unique_name: Programming Category
+    label: Programming Category
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: progamming_category
+
+        secondary_attributes:
+
+          - unique_name: d_PROGRAMMING_CATEGORY_DESC
+            label: Programming Category Desc
+            folder: Content - Type Attributes
+            dataset: PROGRAMMING_CATEGORY_D
+            name_column: PROGRAMMING_CATEGORY_DESC
+            key_columns:
+              - PROGRAMMING_CATEGORY_DESC
+            sort_column: PROGRAMMING_CATEGORY_DESC
+
+level_attributes:
+
+  - unique_name: progamming_category
+    label: Progamming Category
+    is_unique_key: true
+    dataset: PROGRAMMING_CATEGORY_D
+    name_column: PROGRAMMING_CATEGORY_ID
+    key_columns:
+      - PROGRAMMING_CATEGORY_ID

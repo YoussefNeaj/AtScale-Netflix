@@ -1,0 +1,21 @@
+unique_name: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+object_type: dataset
+label: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+connection_id: DSE
+table: CONTENT_FUNNEL_TITLE_ACCOUNT_SUM
+
+columns:
+  - name: ACCOUNT_ID
+    data_type: "decimal(38,0)"
+  - name: PLAYBACK_REGION_DATE_ID
+    data_type: date
+  - name: TITLE_COMPLETER_CNT
+    data_type: "decimal(38,0)"
+  - name: TITLE_FIRST_PLAYBACK_COUNTRY_ID
+    data_type: string
+  - name: TITLE_ID
+    data_type: "decimal(38,0)"
+  - name: TITLE_STARTER_CNT
+    data_type: "decimal(38,0)"
+  - name: TITLE_STICKER_CNT
+    data_type: "decimal(38,0)"

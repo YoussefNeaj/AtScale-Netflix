@@ -1,0 +1,5 @@
+unique_name: DSE_ARC
+label: DSE_ARC
+object_type: connection
+as_connection: DSE
+schema: ARC

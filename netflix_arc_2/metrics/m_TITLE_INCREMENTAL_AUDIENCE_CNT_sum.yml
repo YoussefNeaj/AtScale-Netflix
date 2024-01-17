@@ -1,0 +1,6 @@
+unique_name: m_TITLE_INCREMENTAL_AUDIENCE_CNT_sum
+object_type: metric
+label: Title Audience Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_TITLE_SUM
+column: TITLE_INCREMENTAL_AUDIENCE_CNT

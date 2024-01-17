@@ -1,0 +1,423 @@
+unique_name: Geo
+object_type: dimension
+label: Geo
+type: standard
+
+hierarchies:
+
+  - unique_name: Content Geo
+    label: Content Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: region
+
+      - unique_name: content_subregion
+
+        aliases:
+
+          - unique_name: d_CONTENT_SUBREGION_DESC
+            label: Content Subregion Desc
+            folder: Geo
+            dataset: CONTENT_SUBREGION_D
+            name_column: CONTENT_SUBREGION_DESC
+            sort_column: CONTENT_SUBREGION_DESC
+
+      - unique_name: country
+
+        aliases:
+
+          - unique_name: d_COUNTRY_DESC
+            label: Country Desc
+            folder: Geo
+            associated_hierarchy: Content Geo
+            dataset: COUNTRY_D
+            name_column: COUNTRY_DESC
+            sort_column: COUNTRY_DESC
+
+          - unique_name: d_country_iso_code
+            label: Country ISO Code
+            folder: Geo
+            associated_hierarchy: Content Geo
+            dataset: COUNTRY_D
+            name_column: COUNTRY_ISO_CODE
+            sort_column: COUNTRY_ISO_CODE
+
+  - unique_name: Marketing Geo Hierarchy
+    label: Marketing Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: marketing_region
+
+      - unique_name: marketing_subregion
+
+      - unique_name: country
+
+  - unique_name: active_prioritization_market_geo
+    label: Active Prioritization Market Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: active_prioritization_market
+
+      - unique_name: country
+
+  - unique_name: prioritization_market_geo
+    label: Prioritization Market Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: prioritization_market
+
+      - unique_name: country
+
+  - unique_name: estaff_subregion_geo
+    label: EStaff Subregion Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: estaff_subregion
+
+      - unique_name: country
+
+  - unique_name: finance_subregion_geo
+    label: Finance Subregion Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: finance_subregion
+
+        aliases:
+
+          - unique_name: m_FINANCE_SUBREGION_DESC_sum
+            label: Finance Subregion Desc
+            folder: Geo
+            dataset: FINANCE_SUBREGION_D
+            name_column: FINANCE_SUBREGION_DESC
+            sort_column: FINANCE_SUBREGION_DESC
+
+      - unique_name: country
+
+  - unique_name: Region Rollup Geo
+    label: Region Rollup Geo
+    folder: Geo - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Region Rollup Geo
+
+      - unique_name: country
+
+level_attributes:
+
+  - unique_name: active_prioritization_market
+    label: Active Prioritization Market
+    folder: Geo
+    dataset: ACTIVE_PRIORITIZATION_MARKET_D
+    name_column: ACTIVE_PRIORITIZATION_MARKET_DESC
+    key_columns:
+      - ACTIVE_PRIORITIZATION_MARKET_ID
+
+  - unique_name: content_subregion
+    label: Content Subregion Short Desc
+    is_unique_key: true
+    dataset: CONTENT_SUBREGION_D
+    name_column: CONTENT_SUBREGION_SHORT_DESC
+    key_columns:
+      - CONTENT_SUBREGION_ID
+
+  - unique_name: country
+    label: Country ID
+    is_unique_key: true
+    dataset: COUNTRY_D
+    name_column: COUNTRY_ID
+    key_columns:
+      - COUNTRY_ID
+
+  - unique_name: estaff_subregion
+    label: EStaff Subregion
+    folder: Geo
+    dataset: ESTAFF_SUBREGION_D
+    name_column: ESTAFF_SUBREGION_DESC
+    key_columns:
+      - ESTAFF_SUBREGION_ID
+
+  - unique_name: finance_subregion
+    label: Finance Subregion
+    folder: Geo
+    dataset: FINANCE_SUBREGION_D
+    name_column: FINANCE_SUBREGION_DESC
+    key_columns:
+      - FINANCE_SUBREGION_ID
+
+  - unique_name: marketing_region
+    label: Marketing Region
+    is_unique_key: true
+    dataset: MARKETING_REGION_D
+    name_column: MARKETING_REGION_DESC
+    key_columns:
+      - MARKETING_REGION_ID
+
+  - unique_name: marketing_subregion
+    label: Marketing Subregion
+    is_unique_key: true
+    dataset: MARKETING_SUBREGION_D
+    name_column: MARKETING_SUBREGION_DESC
+    key_columns:
+      - MARKETING_SUBREGION_ID
+
+  - unique_name: prioritization_market
+    label: Prioritization Market
+    folder: Geo
+    dataset: PRIORITIZATION_MARKET_D
+    name_column: PRIORITIZATION_MARKET_DESC
+    key_columns:
+      - PRIORITIZATION_MARKET_ID
+
+  - unique_name: Region Rollup Geo
+    label: Region Rollup Geo
+    dataset: REGION_ROLLUP_D
+    name_column: REGION_ROLLUP_DESC
+    key_columns:
+      - REGION_ROLLUP_ID
+
+  - unique_name: region
+    label: Region
+    is_unique_key: true
+    dataset: REGION_D
+    name_column: REGION_DESC
+    key_columns:
+      - REGION_ID
+
+relationships:
+
+  - from:
+      dataset: CONTENT_SUBREGION_D
+      join_columns:
+        - REGION_ID
+    to:
+      level: region
+    type: snowflake
+
+  - unique_name: Geo_Date_CountryLaunch-
+    from:
+      hierarchy: Content Geo
+      level: country
+      dataset: COUNTRY_D
+      join_columns:
+        - LAUNCH_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Country Launch - {0}"
+    type: embedded
+
+  - unique_name: Geo_Language
+    from:
+      hierarchy: Content Geo
+      level: country
+      dataset: COUNTRY_D
+      join_columns:
+        - PRIMARY_LANGUAGE_ID
+    to:
+      dimension: Language
+      level: language
+    type: embedded
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - REGION_ROLLUP_ID
+    to:
+      level: Region Rollup Geo
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - ESTAFF_SUBREGION_ID
+    to:
+      level: estaff_subregion
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - MARKETING_SUBREGION_ID
+    to:
+      level: marketing_subregion
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - CONTENT_SUBREGION_ID
+    to:
+      level: content_subregion
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - ACTIVE_PRIORITIZATION_MARKET_ID
+    to:
+      level: active_prioritization_market
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - FINANCE_SUBREGION_ID
+    to:
+      level: finance_subregion
+    type: snowflake
+
+  - from:
+      dataset: COUNTRY_D
+      join_columns:
+        - PRIORITIZATION_MARKET_ID
+    to:
+      level: prioritization_market
+    type: snowflake
+
+  - from:
+      dataset: MARKETING_SUBREGION_D
+      join_columns:
+        - MARKETING_REGION_ID
+    to:
+      level: marketing_region
+    type: snowflake
+
+calculation_groups:
+
+  - unique_name: foo
+    label: foo
+
+    calculated_members:
+
+      - unique_name: Active Prioritization Market Geo AVS % (parent)
+        expression: "([Geo].[active_prioritization_market_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[active_prioritization_market_geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: active_prioritization_market_geo
+        template: Pct of Parent
+
+      - unique_name: Active Prioritization Market Geo AVS %
+        expression: "([Geo].[active_prioritization_market_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[active_prioritization_market_geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: active_prioritization_market_geo
+        template: Pct of Total
+
+      - unique_name: Current
+        description: The measure's value for the current dimension members in the
+          query.
+        expression: "([Geo].[Content Geo].CurrentMember, [Measures].currentMember)"
+        format: Standard
+        hierarchy: Content Geo
+        template: Current
+        is_default: true
+
+      - unique_name: EStaff Subregion Geo AVS %
+        expression: "([Geo].[estaff_subregion_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[estaff_subregion_geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: estaff_subregion_geo
+        template: Pct of Total
+
+      - unique_name: Finance Subregion Geo AVS %
+        expression: "([Geo].[finance_subregion_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[finance_subregion_geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: finance_subregion_geo
+        template: Pct of Total
+
+      - unique_name: test
+        expression: "Avg(ParallelPeriod([${Dim}].[${Hier}].[${LevelMonth}], 2, [${Dim}].[${Hier}].CurrentMember):[${Dim}].[${Hier}].CurrentMember,\
+          \ [Measures].currentMember)"
+        format: Standard
+        template: Custom
+
+      - unique_name: Marketing Geo AVS % (parent)
+        expression: "([Geo].[Marketing Geo Hierarchy].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Marketing Geo Hierarchy].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: Marketing Geo Hierarchy
+        template: Pct of Parent
+
+      - unique_name: Content Geo AVS %
+        expression: "([Geo].[Content Geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Content Geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: Content Geo
+        template: Pct of Total
+
+      - unique_name: Prioritization Market Geo AVS % (parent)
+        expression: "([Geo].[prioritization_market_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[prioritization_market_geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: prioritization_market_geo
+        template: Pct of Parent
+
+      - unique_name: Content Geo AVS % (parent)
+        expression: "([Geo].[Content Geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Content Geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: Content Geo
+        template: Pct of Parent
+
+      - unique_name: Finance Subregion Geo AVS % (parent)
+        expression: "([Geo].[finance_subregion_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[finance_subregion_geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: finance_subregion_geo
+        template: Pct of Parent
+
+      - unique_name: Prioritization Market Geo AVS %
+        expression: "([Geo].[prioritization_market_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[prioritization_market_geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: prioritization_market_geo
+        template: Pct of Total
+
+      - unique_name: Marketing Geo AVS %
+        expression: "([Geo].[Marketing Geo Hierarchy].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Marketing Geo Hierarchy].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: Marketing Geo Hierarchy
+        template: Pct of Total
+
+      - unique_name: Region Rollup Geo AVS %
+        expression: "([Geo].[Region Rollup Geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Region Rollup Geo].[All], [Measures].currentMember)"
+        format: Percent
+        hierarchy: Region Rollup Geo
+        template: Pct of Total
+
+      - unique_name: Region Rollup Geo AVS % (parent)
+        expression: "([Geo].[Region Rollup Geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[Region Rollup Geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: Region Rollup Geo
+        template: Pct of Parent
+
+      - unique_name: EStaff Subregion Geo AVS % (parent)
+        expression: "([Geo].[estaff_subregion_geo].CurrentMember, [Measures].currentMember)\
+          \ / ([Geo].[estaff_subregion_geo].CurrentMember.parent, [Measures].currentMember)"
+        format: Percent
+        hierarchy: estaff_subregion_geo
+        template: Pct of Parent

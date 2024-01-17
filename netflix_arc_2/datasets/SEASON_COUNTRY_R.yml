@@ -1,0 +1,53 @@
+unique_name: SEASON_COUNTRY_R
+object_type: dataset
+label: SEASON_COUNTRY_R
+connection_id: DSE
+table: SEASON_COUNTRY_R
+
+columns:
+  - name: COUNTRY_ID
+    data_type: string
+  - name: F52W_LATEST_COUNTRY_PAVS
+    data_type: double
+  - name: HAS_FIRST_RUN_AND_EXCLUSIVE_BOOST
+    data_type: "decimal(38,0)"
+  - name: IS_FIRST_RUN_AND_EXCLUSIVE
+    data_type: "decimal(38,0)"
+  - name: IS_SEASON_COUNTRY_LAUNCHED
+    data_type: "decimal(38,0)"
+  - name: LATEST_COUNTRY_BUYING_TEAM_ID
+    data_type: "decimal(38,0)"
+  - name: LATEST_COUNTRY_CONTENT_VENDOR_ID
+    data_type: string
+  - name: LIFETIME_LATEST_COUNTRY_IMPACT_VALUE
+    data_type: "decimal(30,2)"
+  - name: SEASON_COUNTRY_BATCH_CNT
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_CONTENT_RUNTIME_SECS
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_EPISODE_CNT
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SEASON_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SEASON_COUNTRY_IS_BRANDED
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_IS_DAY_AFTER_BROADCAST
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_IS_DAY_OF_BROADCAST
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_RELEASE_PATTERN_GROUP_TYPE
+    data_type: string
+  - name: SEASON_COUNTRY_RELEASE_PATTERN_SUBTYPE
+    data_type: string
+  - name: SEASON_COUNTRY_RELEASE_PATTERN_TYPE
+    data_type: string
+  - name: SEASON_COUNTRY_RUNTIME_SECS
+    data_type: "decimal(38,0)"
+  - name: SEASON_COUNTRY_SEQUENCE_NBR
+    data_type: "decimal(38,0)"
+  - name: SEASON_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_ID
+    data_type: "decimal(38,0)"

@@ -1,0 +1,6 @@
+unique_name: m_SHOW_COMPLETER_CNT_sum
+object_type: metric
+label: Show Completer Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SHOW_SUM
+column: SHOW_COMPLETER_CNT

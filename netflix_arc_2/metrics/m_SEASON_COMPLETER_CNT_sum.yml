@@ -1,0 +1,6 @@
+unique_name: m_SEASON_COMPLETER_CNT_sum
+object_type: metric
+label: Season Completer Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SEASON_SUM
+column: SEASON_COMPLETER_CNT

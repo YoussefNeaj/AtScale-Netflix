@@ -1,0 +1,496 @@
+unique_name: Content Country Relationship
+object_type: dimension
+label: Content Country Relationship
+type: standard
+
+hierarchies:
+
+  - unique_name: Content Geo Hierarchy
+    label: Geo Content
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: show_country
+
+        secondary_attributes:
+
+          - unique_name: d_IS_SHOW_COUNTRY_LAUNCHED
+            label: ' Show Country  - Is Launched'
+            folder: Content - Show Attributes
+            dataset: SHOW_COUNTRY_R
+            name_column: IS_SHOW_COUNTRY_LAUNCHED
+            key_columns:
+              - IS_SHOW_COUNTRY_LAUNCHED
+            sort_column: IS_SHOW_COUNTRY_LAUNCHED
+
+          - unique_name: d_SHOW_COUNTRY_IS_BRANDED
+            label: ' Show Country -  Is Branded'
+            folder: Content - Show Attributes
+            dataset: SHOW_COUNTRY_R
+            name_column: SHOW_COUNTRY_IS_BRANDED
+            key_columns:
+              - SHOW_COUNTRY_IS_BRANDED
+            sort_column: SHOW_COUNTRY_IS_BRANDED
+
+          - unique_name: d_SHOW_COUNTRY_RUNTIME_SECS
+            label: Show Country Runtime  Seconds
+            folder: Content - Show Attributes
+            dataset: SHOW_COUNTRY_R
+            name_column: SHOW_COUNTRY_RUNTIME_SECS
+            key_columns:
+              - SHOW_COUNTRY_RUNTIME_SECS
+            sort_column: SHOW_COUNTRY_RUNTIME_SECS
+
+      - unique_name: season_country
+
+        secondary_attributes:
+
+          - unique_name: d_content_runtime_secs
+            label: Season Country Content Run Time Seconds
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_CONTENT_RUNTIME_SECS
+            key_columns:
+              - SEASON_COUNTRY_CONTENT_RUNTIME_SECS
+            sort_column: SEASON_COUNTRY_CONTENT_RUNTIME_SECS
+
+          - unique_name: d_f52w_latest_country_pavs
+            label: Season Country Batch Count
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: F52W_LATEST_COUNTRY_PAVS
+            key_columns:
+              - F52W_LATEST_COUNTRY_PAVS
+            sort_column: F52W_LATEST_COUNTRY_PAVS
+
+          - unique_name: d_has_first_run_and_exclusive_boost
+            label: Season Country  - Has First Run And Exclusive Boost
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: HAS_FIRST_RUN_AND_EXCLUSIVE_BOOST
+            key_columns:
+              - HAS_FIRST_RUN_AND_EXCLUSIVE_BOOST
+            sort_column: HAS_FIRST_RUN_AND_EXCLUSIVE_BOOST
+
+          - unique_name: d_is_first_run_and_exclusive
+            label: Season Country - Is First Run And Exclusive
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: IS_FIRST_RUN_AND_EXCLUSIVE
+            key_columns:
+              - IS_FIRST_RUN_AND_EXCLUSIVE
+            sort_column: IS_FIRST_RUN_AND_EXCLUSIVE
+
+          - unique_name: d_is_season_country_launched
+            label: Season Country - Is Launched
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: IS_SEASON_COUNTRY_LAUNCHED
+            key_columns:
+              - IS_SEASON_COUNTRY_LAUNCHED
+            sort_column: IS_SEASON_COUNTRY_LAUNCHED
+
+          - unique_name: d_lifetime_latest_country_impact_value
+            label: Season Country - Lifetime Latest Impact Value
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: LIFETIME_LATEST_COUNTRY_IMPACT_VALUE
+            key_columns:
+              - LIFETIME_LATEST_COUNTRY_IMPACT_VALUE
+            sort_column: LIFETIME_LATEST_COUNTRY_IMPACT_VALUE
+
+          - unique_name: d_season_country_batch_cnt
+            label: Season Country -  Batch Count
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_BATCH_CNT
+            key_columns:
+              - SEASON_COUNTRY_BATCH_CNT
+            sort_column: SEASON_COUNTRY_BATCH_CNT
+
+          - unique_name: d_season_country_episode_count
+            label: Season Country Episode Count
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_EPISODE_CNT
+            key_columns:
+              - SEASON_COUNTRY_EPISODE_CNT
+            sort_column: SEASON_COUNTRY_EPISODE_CNT
+
+          - unique_name: d_season_country_is_branded
+            label: Season Country Is Branded
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_IS_BRANDED
+            key_columns:
+              - SEASON_COUNTRY_IS_BRANDED
+            sort_column: SEASON_COUNTRY_IS_BRANDED
+
+          - unique_name: d_season_country_is_day_after_broadcast
+            label: Season Country - Is Day After Broadcast
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_IS_DAY_AFTER_BROADCAST
+            key_columns:
+              - SEASON_COUNTRY_IS_DAY_AFTER_BROADCAST
+            sort_column: SEASON_COUNTRY_IS_DAY_AFTER_BROADCAST
+
+          - unique_name: d_SEASON_COUNTRY_IS_DAY_OF_BROADCAST
+            label: Season Country - Is Day Of Broadcast
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_IS_DAY_OF_BROADCAST
+            key_columns:
+              - SEASON_COUNTRY_IS_DAY_OF_BROADCAST
+            sort_column: SEASON_COUNTRY_IS_DAY_OF_BROADCAST
+
+          - unique_name: d_season_country_release_pattern_group_type
+            label: Season Country Release Pattern Group Type
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_RELEASE_PATTERN_GROUP_TYPE
+            key_columns:
+              - SEASON_COUNTRY_RELEASE_PATTERN_GROUP_TYPE
+            sort_column: SEASON_COUNTRY_RELEASE_PATTERN_GROUP_TYPE
+
+          - unique_name: d_season_country_release_pattern_subtype
+            label: Season Country Release Pattern Subtype
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_RELEASE_PATTERN_SUBTYPE
+            key_columns:
+              - SEASON_COUNTRY_RELEASE_PATTERN_SUBTYPE
+            sort_column: SEASON_COUNTRY_RELEASE_PATTERN_SUBTYPE
+
+          - unique_name: d_season_country_release_pattern_type
+            label: Season Country Release Pattern Type
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_RELEASE_PATTERN_TYPE
+            key_columns:
+              - SEASON_COUNTRY_RELEASE_PATTERN_TYPE
+            sort_column: SEASON_COUNTRY_RELEASE_PATTERN_TYPE
+
+          - unique_name: d_season_country_runtime_secs
+            label: Season Country  Runtime Seconds
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_RUNTIME_SECS
+            key_columns:
+              - SEASON_COUNTRY_RUNTIME_SECS
+            sort_column: SEASON_COUNTRY_RUNTIME_SECS
+
+          - unique_name: d_season_country_sequence_nbr
+            label: Season Country Sequence Number
+            folder: Content - Season Attributes
+            dataset: SEASON_COUNTRY_R
+            name_column: SEASON_COUNTRY_SEQUENCE_NBR
+            key_columns:
+              - SEASON_COUNTRY_SEQUENCE_NBR
+            sort_column: SEASON_COUNTRY_SEQUENCE_NBR
+
+      - unique_name: batch_country
+
+        secondary_attributes:
+
+          - unique_name: d_batch_country_content_runtime_secs
+            label: Batch Country Content Runtime Seconds
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_CONTENT_RUNTIME_SECS
+            key_columns:
+              - BATCH_COUNTRY_CONTENT_RUNTIME_SECS
+            sort_column: BATCH_COUNTRY_CONTENT_RUNTIME_SECS
+
+          - unique_name: d_batch_country_episode_count
+            label: Batch Country Episode Count
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_EPISODE_COUNT
+            key_columns:
+              - BATCH_COUNTRY_EPISODE_COUNT
+            sort_column: BATCH_COUNTRY_EPISODE_COUNT
+
+          - unique_name: d_batch_country_first_actual_launch_region_date
+            label: Batch Country First Actual Launch Region Date
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+            key_columns:
+              - BATCH_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+            sort_column: BATCH_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+
+          - unique_name: d_batch_country_first_planned_launch_region_date
+            label: Batch Country First Planned Launch Region Date
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+            key_columns:
+              - BATCH_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+            sort_column: BATCH_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+
+          - unique_name: d_batch_country_runtime_seconds
+            label: Batch Country Runtime Seconds
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_RUNTIME_SECS
+            key_columns:
+              - BATCH_COUNTRY_RUNTIME_SECS
+            sort_column: BATCH_COUNTRY_RUNTIME_SECS
+
+          - unique_name: d_batch_country_sequence_nbr
+            label: Batch Country Sequence Number
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: BATCH_COUNTRY_SEQUENCE_NBR
+            key_columns:
+              - BATCH_COUNTRY_SEQUENCE_NBR
+            sort_column: BATCH_COUNTRY_SEQUENCE_NBR
+
+          - unique_name: d_is_batch_country_launched
+            label: Batch Country - Is Launched
+            folder: Content - Batch Attributes
+            dataset: BATCH_COUNTRY_R
+            name_column: IS_BATCH_COUNTRY_LAUNCHED
+            key_columns:
+              - IS_BATCH_COUNTRY_LAUNCHED
+            sort_column: IS_BATCH_COUNTRY_LAUNCHED
+
+      - unique_name: title_country
+
+        secondary_attributes:
+
+          - unique_name: d_IS_TITLE_COUNTRY_LAUNCHED
+            label: Title Country - Is  Launched
+            folder: Content - Hierarchy
+            dataset: TITLE_COUNTRY_R
+            name_column: IS_TITLE_COUNTRY_LAUNCHED
+            key_columns:
+              - IS_TITLE_COUNTRY_LAUNCHED
+            sort_column: IS_TITLE_COUNTRY_LAUNCHED
+
+          - unique_name: d_TITLE_COUNTRY_CONTENT_RUNTIME_SECS
+            label: Title Country Content Runtime Seconds
+            folder: Content - Title Attributes
+            dataset: TITLE_COUNTRY_R
+            name_column: TITLE_COUNTRY_CONTENT_RUNTIME_SECS
+            key_columns:
+              - TITLE_COUNTRY_CONTENT_RUNTIME_SECS
+            sort_column: TITLE_COUNTRY_CONTENT_RUNTIME_SECS
+
+          - unique_name: d_TITLE_COUNTRY_DEFAULT_DISPLAY_SEQUENCE_NBR
+            label: Title Country Default Display Sequence Number
+            folder: Content - Title Attributes
+            dataset: TITLE_COUNTRY_R
+            name_column: TITLE_COUNTRY_DEFAULT_DISPLAY_SEQUENCE_NBR
+            key_columns:
+              - TITLE_COUNTRY_DEFAULT_DISPLAY_SEQUENCE_NBR
+            sort_column: TITLE_COUNTRY_DEFAULT_DISPLAY_SEQUENCE_NBR
+
+          - unique_name: d_TITLE_COUNTRY_RUNTIME_SECS
+            label: Title Country Runtime Seconds
+            folder: Content - Title Attributes
+            dataset: TITLE_COUNTRY_R
+            name_column: TITLE_COUNTRY_RUNTIME_SECS
+            key_columns:
+              - TITLE_COUNTRY_RUNTIME_SECS
+            sort_column: TITLE_COUNTRY_RUNTIME_SECS
+
+level_attributes:
+
+  - unique_name: batch_country
+    label: Batch Country
+    is_unique_key: true
+    dataset: BATCH_COUNTRY_R
+    name_column: BATCH_ID
+    key_columns:
+      - BATCH_ID
+      - COUNTRY_ID
+
+  - unique_name: season_country
+    label: Season Country
+    is_unique_key: true
+    dataset: SEASON_COUNTRY_R
+    name_column: SEASON_ID
+    key_columns:
+      - SEASON_ID
+      - COUNTRY_ID
+
+  - unique_name: show_country
+    label: Show Country
+    is_unique_key: true
+    dataset: SHOW_COUNTRY_R
+    name_column: SHOW_ID
+    key_columns:
+      - SHOW_ID
+      - COUNTRY_ID
+
+  - unique_name: title_country
+    label: Title Country
+    is_unique_key: true
+    dataset: TITLE_COUNTRY_R
+    name_column: TITLE_ID
+    key_columns:
+      - TITLE_ID
+      - COUNTRY_ID
+
+relationships:
+
+  - unique_name: ContentCountryRelationship_Date_BatchCountry-FirstActualLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: batch_country
+      dataset: BATCH_COUNTRY_R
+      join_columns:
+        - BATCH_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Batch Country - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_BatchCountry-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: batch_country
+      dataset: BATCH_COUNTRY_R
+      join_columns:
+        - BATCH_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Batch Country - First Planned Launch Region {0}"
+    type: embedded
+
+  - from:
+      dataset: BATCH_COUNTRY_R
+      join_columns:
+        - SEASON_ID
+        - COUNTRY_ID
+    to:
+      level: season_country
+    type: snowflake
+
+  - unique_name: ContentCountryRelationship_BuyingTeam_SeasonCountryLatest
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: season_country
+      dataset: SEASON_COUNTRY_R
+      join_columns:
+        - LATEST_COUNTRY_BUYING_TEAM_ID
+    to:
+      dimension: Buying Team
+      level: Buying Team
+    role_play: "Season Country Latest {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_SeasonCountry-FirstActualLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: season_country
+      dataset: SEASON_COUNTRY_R
+      join_columns:
+        - SEASON_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Season Country - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_SeasonCountry-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: season_country
+      dataset: SEASON_COUNTRY_R
+      join_columns:
+        - SEASON_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Season Country - First Planned Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_ContentVendor_SeasonCountryLatest
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: season_country
+      dataset: SEASON_COUNTRY_R
+      join_columns:
+        - LATEST_COUNTRY_CONTENT_VENDOR_ID
+    to:
+      dimension: Content Vendor
+      level: content_vendor
+    role_play: "Season Country Latest {0}"
+    type: embedded
+
+  - from:
+      dataset: SEASON_COUNTRY_R
+      join_columns:
+        - SHOW_ID
+        - COUNTRY_ID
+    to:
+      level: show_country
+    type: snowflake
+
+  - unique_name: ContentCountryRelationship_Date_ShowCountry-FirstActualLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: show_country
+      dataset: SHOW_COUNTRY_R
+      join_columns:
+        - SHOW_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Show Country - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_ShowCountry-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: show_country
+      dataset: SHOW_COUNTRY_R
+      join_columns:
+        - SHOW_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Show Country - First Planned Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_TitleCountry-FirstActualLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: title_country
+      dataset: TITLE_COUNTRY_R
+      join_columns:
+        - TITLE_COUNTRY_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Title Country - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: ContentCountryRelationship_Date_TitleCountry-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content Geo Hierarchy
+      level: title_country
+      dataset: TITLE_COUNTRY_R
+      join_columns:
+        - TITLE_COUNTRY_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Title Country - First Planned Launch Region {0}"
+    type: embedded
+
+  - from:
+      dataset: TITLE_COUNTRY_R
+      join_columns:
+        - BATCH_ID
+        - COUNTRY_ID
+    to:
+      level: batch_country
+    type: snowflake

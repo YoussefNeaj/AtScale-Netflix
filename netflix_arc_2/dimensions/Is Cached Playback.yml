@@ -1,0 +1,33 @@
+unique_name: Is Cached Playback
+object_type: dimension
+label: Is Cached Playback
+is_degenerate: true
+
+hierarchies:
+
+  - unique_name: Is Cached Playback
+    label: Is Cached Playback
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Is Cached Playback Level
+
+        aliases:
+
+          - unique_name: d_IS_CACHED_PLAYBACK
+            label: Playback - Is Cached
+            folder: Content - Playback Attributes
+            dataset: PLAYBACK_TITLE_AGG
+            name_column: IS_CACHED_PLAYBACK
+            sort_column: IS_CACHED_PLAYBACK
+
+level_attributes:
+
+  - unique_name: Is Cached Playback Level
+    label: Is Cached Playback
+    dataset: PLAYBACK_TITLE_AGG
+    name_column: IS_CACHED_PLAYBACK
+    key_columns:
+      - IS_CACHED_PLAYBACK

@@ -1,0 +1,6 @@
+unique_name: m_SEASON_INCREMENTAL_AUDIENCE_CNT_sum
+object_type: metric
+label: Season Audience Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SEASON_SUM
+column: SEASON_INCREMENTAL_AUDIENCE_CNT

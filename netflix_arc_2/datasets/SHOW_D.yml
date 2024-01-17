@@ -1,0 +1,51 @@
+unique_name: SHOW_D
+object_type: dataset
+label: SHOW_D
+connection_id: DSE
+table: SHOW_D
+
+columns:
+  - name: IS_SHOW_LAUNCHED_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: SHOW_ANALYTIC_GENRE_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_CONTENT_CATEGORY_ID
+    data_type: string
+  - name: SHOW_CONTENT_TYPE_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_DESC
+    data_type: string
+  - name: SHOW_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SHOW_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SHOW_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_AGE_5_12
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_ANIMATED
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_BRANDED_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_BRANDED_EVERYWHERE
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_FAMILY_AUDIENCE
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_INTERACTIVE
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_OVERALL_DEAL
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_PRESCHOOL
+    data_type: "decimal(38,0)"
+  - name: SHOW_IS_PROMOTIONAL
+    data_type: "decimal(38,0)"
+  - name: SHOW_ORIGINAL_LANGUAGE_ID
+    data_type: string
+  - name: SHOW_ORIGIN_COUNTRY_ID
+    data_type: string
+  - name: SHOW_PROGRAMMING_CATEGORY_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_RESOLVED_BUYING_TEAM_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_TYPE_CODE
+    data_type: string

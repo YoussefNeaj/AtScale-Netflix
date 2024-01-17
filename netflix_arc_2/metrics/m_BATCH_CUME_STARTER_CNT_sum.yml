@@ -1,0 +1,6 @@
+unique_name: m_BATCH_CUME_STARTER_CNT_sum
+object_type: metric
+label: Batch Cumulative Starter Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_BATCH_SUM
+column: BATCH_CUME_STARTER_CNT

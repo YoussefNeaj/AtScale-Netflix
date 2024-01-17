@@ -1,0 +1,15 @@
+unique_name: YEAR_MONTH_D
+object_type: dataset
+label: YEAR_MONTH_D
+connection_id: DSE
+table: YEAR_MONTH_D
+
+columns:
+  - name: MONTH_OF_YEAR_MM
+    data_type: string
+  - name: YEAR_MONTH_DESC
+    data_type: string
+  - name: YEAR_MONTH_ID
+    data_type: "decimal(38,0)"
+  - name: YEAR_QUARTER_ID
+    data_type: string

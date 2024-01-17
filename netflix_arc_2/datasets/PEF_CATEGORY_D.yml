@@ -1,0 +1,11 @@
+unique_name: PEF_CATEGORY_D
+object_type: dataset
+label: PEF_CATEGORY_D
+connection_id: DSE_ARC
+table: PEF_CATEGORY_D
+
+columns:
+  - name: PEF_CATEGORY_DESC
+    data_type: string
+  - name: PEF_CATEGORY_ID
+    data_type: string

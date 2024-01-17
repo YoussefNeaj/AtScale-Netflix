@@ -1,0 +1,45 @@
+unique_name: Content Category
+object_type: dimension
+label: Content Category
+type: standard
+
+hierarchies:
+
+  - unique_name: Content Category
+    label: Content Category
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: content_category
+
+        secondary_attributes:
+
+          - unique_name: d_CONTENT_CATEGORY_DESC
+            label: Content Category Desc
+            folder: Content - Type Attributes
+            dataset: CONTENT_CATEGORY_D
+            name_column: CONTENT_CATEGORY_DESC
+            key_columns:
+              - CONTENT_CATEGORY_DESC
+            sort_column: CONTENT_CATEGORY_DESC
+
+          - unique_name: d_content_category_type_code
+            label: Content Category Type Code
+            folder: Content - Type Attributes
+            dataset: CONTENT_CATEGORY_D
+            name_column: CONTENT_CATEGORY_TYPE_CODE
+            key_columns:
+              - CONTENT_CATEGORY_TYPE_CODE
+            sort_column: CONTENT_CATEGORY_TYPE_CODE
+
+level_attributes:
+
+  - unique_name: content_category
+    label: Content Category
+    is_unique_key: true
+    dataset: CONTENT_CATEGORY_D
+    name_column: CONTENT_CATEGORY_ID
+    key_columns:
+      - CONTENT_CATEGORY_ID

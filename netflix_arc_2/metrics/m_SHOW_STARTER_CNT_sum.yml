@@ -1,0 +1,6 @@
+unique_name: m_SHOW_STARTER_CNT_sum
+object_type: metric
+label: Show Starter Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SHOW_SUM
+column: SHOW_STARTER_CNT

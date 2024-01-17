@@ -1,0 +1,6 @@
+unique_name: m_SEASON_CUME_STICKER_CNT_sum
+object_type: metric
+label: Season Cumulative Sticker Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SEASON_SUM
+column: SEASON_CUME_STICKER_CNT

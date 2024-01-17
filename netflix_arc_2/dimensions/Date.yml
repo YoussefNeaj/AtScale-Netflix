@@ -1,0 +1,81 @@
+unique_name: Date
+object_type: dimension
+label: Date
+type: standard
+
+hierarchies:
+
+  - unique_name: Date Month
+    label: Date
+    folder: Hierarchy - Date
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: year
+
+      - unique_name: quarter
+
+      - unique_name: month
+
+      - unique_name: date
+
+        aliases:
+
+          - unique_name: d_DATE_ID
+            label: Date
+            format: General Date
+            folder: Date
+            dataset: DATE_D
+            name_column: DATE_ID
+            sort_column: DATE_ID
+
+level_attributes:
+
+  - unique_name: date
+    label: Date
+    is_unique_key: true
+    dataset: DATE_D
+    name_column: DATE_ID
+    key_columns:
+      - DATE_ID
+
+  - unique_name: month
+    label: Month
+    is_unique_key: true
+    dataset: YEAR_MONTH_D
+    name_column: YEAR_MONTH_DESC
+    key_columns:
+      - YEAR_MONTH_ID
+
+  - unique_name: quarter
+    label: Quarter
+    dataset: YEAR_QUARTER_D
+    name_column: YEAR_QUARTER_DESC
+    key_columns:
+      - YEAR_QUARTER_ID
+
+  - unique_name: year
+    label: Year
+    dataset: YEAR_QUARTER_D
+    name_column: YEAR_ID
+    key_columns:
+      - YEAR_ID
+
+relationships:
+
+  - from:
+      dataset: DATE_D
+      join_columns:
+        - YEAR_MONTH_ID
+    to:
+      level: month
+    type: snowflake
+
+  - from:
+      dataset: YEAR_MONTH_D
+      join_columns:
+        - YEAR_QUARTER_ID
+    to:
+      level: quarter
+    type: snowflake

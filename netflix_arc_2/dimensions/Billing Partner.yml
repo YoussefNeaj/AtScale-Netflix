@@ -1,0 +1,36 @@
+unique_name: Billing Partner
+object_type: dimension
+label: Billing Partner
+type: standard
+
+hierarchies:
+
+  - unique_name: Billing Partner
+    label: Billing Partner
+    folder: Customer - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Billing Partner
+
+        secondary_attributes:
+
+          - unique_name: d_BILLING_PARTNER_DESC
+            label: Billing Partner Desc
+            folder: Customer - Service Attributes
+            dataset: BILLING_PARTNER_D
+            name_column: BILLING_PARTNER_DESC
+            key_columns:
+              - BILLING_PARTNER_DESC
+            sort_column: BILLING_PARTNER_DESC
+
+level_attributes:
+
+  - unique_name: Billing Partner
+    label: Billing Partner
+    is_unique_key: true
+    dataset: BILLING_PARTNER_D
+    name_column: BILLING_PARTNER_ID
+    key_columns:
+      - BILLING_PARTNER_ID

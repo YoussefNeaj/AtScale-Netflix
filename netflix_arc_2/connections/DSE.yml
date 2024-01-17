@@ -1,0 +1,6 @@
+unique_name: DSE
+label: DSE
+object_type: connection
+as_connection: DSE
+database: DSE
+schema: ARC

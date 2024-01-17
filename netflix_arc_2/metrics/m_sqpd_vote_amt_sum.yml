@@ -1,0 +1,6 @@
+unique_name: m_sqpd_vote_amt_sum
+object_type: metric
+label: SQPD Vote Amount
+calculation_method: sum
+dataset: PLAYBACK_TITLE_AGG
+column: SQPD_VOTE_AMT

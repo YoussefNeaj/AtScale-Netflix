@@ -1,0 +1,6 @@
+unique_name: m_content_view_secs_sum
+object_type: metric
+label: Content View Secs
+calculation_method: sum
+dataset: PLAYBACK_TITLE_AGG
+column: CONTENT_VIEW_SECS

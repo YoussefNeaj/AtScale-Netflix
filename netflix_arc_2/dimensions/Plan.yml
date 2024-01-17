@@ -1,0 +1,93 @@
+unique_name: Plan
+object_type: dimension
+label: Plan
+type: standard
+
+hierarchies:
+
+  - unique_name: Plan
+    label: Plan
+    folder: Customer - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: plan_roll_up
+
+        secondary_attributes:
+
+          - unique_name: d_is_free_plan_rollup
+            label: Plan Rollup - Is Free Plan
+            folder: Customer - Service Attributes
+            dataset: PLAN_ROLLUP_D
+            name_column: IS_FREE_PLAN_ROLLUP
+            key_columns:
+              - IS_FREE_PLAN_ROLLUP
+            sort_column: IS_FREE_PLAN_ROLLUP
+
+          - unique_name: d_plan_rollup_category_code
+            label: Plan Rollup - Category Code
+            folder: Customer - Service Attributes
+            dataset: PLAN_ROLLUP_D
+            name_column: PLAN_ROLLUP_CATEGORY_CODE
+            key_columns:
+              - PLAN_ROLLUP_CATEGORY_CODE
+            sort_column: PLAN_ROLLUP_CATEGORY_CODE
+
+          - unique_name: d_plan_rollup_desc
+            label: Plan Rollup - Description
+            folder: Customer - Service Attributes
+            dataset: PLAN_ROLLUP_D
+            name_column: PLAN_ROLLUP_DESC
+            key_columns:
+              - PLAN_ROLLUP_DESC
+            sort_column: PLAN_ROLLUP_DESC
+
+          - unique_name: d_plan_rollup_has_ads
+            label: Plan Rollup - Has Ads
+            folder: Customer - Service Attributes
+            dataset: PLAN_ROLLUP_D
+            name_column: PLAN_ROLLUP_HAS_ADS
+            key_columns:
+              - PLAN_ROLLUP_HAS_ADS
+            sort_column: PLAN_ROLLUP_HAS_ADS
+
+          - unique_name: d_plan_rollup_max_streaming_quality
+            label: Plan Rollup - Maximum Streaming Quality
+            folder: Customer - Service Attributes
+            dataset: PLAN_ROLLUP_D
+            name_column: PLAN_ROLLUP_MAX_STREAMING_QUALITY
+            key_columns:
+              - PLAN_ROLLUP_MAX_STREAMING_QUALITY
+            sort_column: PLAN_ROLLUP_MAX_STREAMING_QUALITY
+
+      - unique_name: Plan
+        is_hidden: true
+
+level_attributes:
+
+  - unique_name: plan_roll_up
+    label: Plan Roll Up
+    dataset: PLAN_ROLLUP_D
+    name_column: PLAN_ROLLUP_NAME
+    key_columns:
+      - PLAN_ROLLUP_ID
+
+  - unique_name: Plan
+    label: Plan
+    is_hidden: true
+    is_unique_key: true
+    dataset: PLAN_D
+    name_column: PLAN_ID
+    key_columns:
+      - PLAN_ID
+
+relationships:
+
+  - from:
+      dataset: PLAN_D
+      join_columns:
+        - PLAN_ROLLUP_ID
+    to:
+      level: plan_roll_up
+    type: snowflake

@@ -1,0 +1,6 @@
+unique_name: m_TITLE_CUME_COMPLETER_CNT_sum
+object_type: metric
+label: Title Cumulative Completer Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_TITLE_SUM
+column: TITLE_CUME_COMPLETER_CNT

@@ -1,0 +1,6 @@
+unique_name: m_BATCH_STICKER_CNT_sum
+object_type: metric
+label: Batch Sticker Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_BATCH_SUM
+column: BATCH_STICKER_CNT

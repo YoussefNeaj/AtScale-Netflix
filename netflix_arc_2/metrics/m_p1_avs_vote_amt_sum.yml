@@ -1,0 +1,6 @@
+unique_name: m_p1_avs_vote_amt_sum
+object_type: metric
+label: P1 AVS Vote Amount
+calculation_method: sum
+dataset: PLAYBACK_TITLE_AGG
+column: P1_AVS_VOTE_AMT

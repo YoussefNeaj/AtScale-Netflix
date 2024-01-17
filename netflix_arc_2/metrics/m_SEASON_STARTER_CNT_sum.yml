@@ -1,0 +1,6 @@
+unique_name: m_SEASON_STARTER_CNT_sum
+object_type: metric
+label: Season Starter Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SEASON_SUM
+column: SEASON_STARTER_CNT

@@ -1,0 +1,36 @@
+unique_name: PEF Category
+object_type: dimension
+label: PEF Category
+type: standard
+
+hierarchies:
+
+  - unique_name: PEF Category Hierarchy
+    label: PEF Category
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: PEF Category
+
+        secondary_attributes:
+
+          - unique_name: d_PEF_CATEGORY_DESC
+            label: PEF Category Desc
+            folder: Content - Type Attributes
+            dataset: PEF_CATEGORY_D
+            name_column: PEF_CATEGORY_DESC
+            key_columns:
+              - PEF_CATEGORY_DESC
+            sort_column: PEF_CATEGORY_DESC
+
+level_attributes:
+
+  - unique_name: PEF Category
+    label: PEF Category
+    is_unique_key: true
+    dataset: PEF_CATEGORY_D
+    name_column: PEF_CATEGORY_ID
+    key_columns:
+      - PEF_CATEGORY_ID

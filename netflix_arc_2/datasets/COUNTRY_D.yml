@@ -1,0 +1,37 @@
+unique_name: COUNTRY_D
+object_type: dataset
+label: COUNTRY_D
+connection_id: DSE
+table: COUNTRY_D
+
+columns:
+  - name: ACTIVE_PRIORITIZATION_MARKET_ID
+    data_type: string
+  - name: CONTENT_SUBREGION_ID
+    data_type: "decimal(38,0)"
+  - name: COUNTRY_DESC
+    data_type: string
+  - name: COUNTRY_ID
+    data_type: string
+  - name: COUNTRY_ISO_CODE
+    data_type: string
+  - name: ESTAFF_SUBREGION_ID
+    data_type: "decimal(38,0)"
+  - name: FINANCE_SUBREGION_ID
+    data_type: "decimal(38,0)"
+  - name: LAUNCH_DATE_ID
+    data_type: date
+  - name: MARKETING_REGION_ID
+    data_type: "decimal(38,0)"
+  - name: MARKETING_SUBREGION_ID
+    data_type: "decimal(38,0)"
+  - name: PRIMARY_LANGUAGE_ID
+    data_type: string
+  - name: PRIORITIZATION_MARKET_ID
+    data_type: string
+  - name: REGION_IANA_TIME_ZONE_CODE
+    data_type: string
+  - name: REGION_ID
+    data_type: "decimal(38,0)"
+  - name: REGION_ROLLUP_ID
+    data_type: "decimal(38,0)"

@@ -1,0 +1,65 @@
+unique_name: Title Deal Window
+object_type: dimension
+label: Title Deal Window
+type: standard
+
+hierarchies:
+
+  - unique_name: Title Deal Window
+    label: Title Deal Window
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: title_deal_window
+
+level_attributes:
+
+  - unique_name: title_deal_window
+    label: Title Deal Window
+    is_unique_key: true
+    dataset: TITLE_DEAL_WINDOW_D
+    name_column: TITLE_DEAL_WINDOW_ID
+    key_columns:
+      - TITLE_DEAL_WINDOW_ID
+
+relationships:
+
+  - unique_name: TitleDealWindow_BuyingTeam_TitleDealWindow
+    from:
+      hierarchy: Title Deal Window
+      level: title_deal_window
+      dataset: TITLE_DEAL_WINDOW_D
+      join_columns:
+        - BUYING_TEAM_ID
+    to:
+      dimension: Buying Team
+      level: Buying Team
+    role_play: "Title Deal Window {0}"
+    type: embedded
+
+  - unique_name: TitleDealWindow_ContentVendor_DealWindow-
+    from:
+      hierarchy: Title Deal Window
+      level: title_deal_window
+      dataset: TITLE_DEAL_WINDOW_D
+      join_columns:
+        - CONTENT_VENDOR_ID
+    to:
+      dimension: Content Vendor
+      level: content_vendor
+    role_play: "Deal Window - {0}"
+    type: embedded
+
+  - unique_name: TitleDealWindow_Content
+    from:
+      hierarchy: Title Deal Window
+      level: title_deal_window
+      dataset: TITLE_DEAL_WINDOW_D
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+    type: embedded

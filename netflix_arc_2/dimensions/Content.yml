@@ -1,0 +1,702 @@
+unique_name: Content
+object_type: dimension
+label: Content
+type: standard
+
+hierarchies:
+
+  - unique_name: Content
+    label: Content
+    folder: Content - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: show
+
+        secondary_attributes:
+
+          - unique_name: d_is_show_launched_anywhere
+            label: Is Show Launched Anywhere
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: IS_SHOW_LAUNCHED_ANYWHERE
+            key_columns:
+              - IS_SHOW_LAUNCHED_ANYWHERE
+            sort_column: IS_SHOW_LAUNCHED_ANYWHERE
+
+          - unique_name: d_show_is_age_5_12
+            label: Show Is Age 5 -12
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_AGE_5_12
+            key_columns:
+              - SHOW_IS_AGE_5_12
+            sort_column: SHOW_IS_AGE_5_12
+
+          - unique_name: d_show_is_animated
+            label: Show Is Animated
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_ANIMATED
+            key_columns:
+              - SHOW_IS_ANIMATED
+            sort_column: SHOW_IS_ANIMATED
+
+          - unique_name: d_show_is_branded_anywhere
+            label: Show Is Branded Anywhere
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_BRANDED_ANYWHERE
+            key_columns:
+              - SHOW_IS_BRANDED_ANYWHERE
+            sort_column: SHOW_IS_BRANDED_ANYWHERE
+
+          - unique_name: d_show_is_branded_everywhere
+            label: Show Is Branded Everywhere
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_BRANDED_EVERYWHERE
+            key_columns:
+              - SHOW_IS_BRANDED_EVERYWHERE
+            sort_column: SHOW_IS_BRANDED_EVERYWHERE
+
+          - unique_name: d_show_is_family_audience
+            label: Show Is Family Audience
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_FAMILY_AUDIENCE
+            key_columns:
+              - SHOW_IS_FAMILY_AUDIENCE
+            sort_column: SHOW_IS_FAMILY_AUDIENCE
+
+          - unique_name: d_show_is_interactive
+            label: Show Is Interactive
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_INTERACTIVE
+            key_columns:
+              - SHOW_IS_INTERACTIVE
+            sort_column: SHOW_IS_INTERACTIVE
+
+          - unique_name: d_show_is_overall_deal
+            label: Show Is Overall Deal
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_OVERALL_DEAL
+            key_columns:
+              - SHOW_IS_OVERALL_DEAL
+            sort_column: SHOW_IS_OVERALL_DEAL
+
+          - unique_name: d_show_is_preschool
+            label: Show Is Preschool
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_PRESCHOOL
+            key_columns:
+              - SHOW_IS_PRESCHOOL
+            sort_column: SHOW_IS_PRESCHOOL
+
+          - unique_name: d_show_is_promotional
+            label: Show Is Promotional
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_IS_PROMOTIONAL
+            key_columns:
+              - SHOW_IS_PROMOTIONAL
+            sort_column: SHOW_IS_PROMOTIONAL
+
+          - unique_name: d_show_type_code
+            label: Show Type Code
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_TYPE_CODE
+            key_columns:
+              - SHOW_TYPE_CODE
+            sort_column: SHOW_TYPE_CODE
+
+        aliases:
+
+          - unique_name: d_SHOW_ID
+            label: Show ID
+            folder: Content - Show Attributes
+            dataset: SHOW_D
+            name_column: SHOW_ID
+            sort_column: SHOW_ID
+
+      - unique_name: season
+
+        secondary_attributes:
+
+          - unique_name: d_is_season_episode_count_same_globally
+            label: Is Season Episode Count Same Globally
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: IS_SEASON_EPISODE_CNT_SAME_GLOBALLY
+            key_columns:
+              - IS_SEASON_EPISODE_CNT_SAME_GLOBALLY
+            sort_column: IS_SEASON_EPISODE_CNT_SAME_GLOBALLY
+
+          - unique_name: d_is_season_launched_anywhere
+            label: Is Season Launched Anywhere
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: IS_SEASON_LAUNCHED_ANYWHERE
+            key_columns:
+              - IS_SEASON_LAUNCHED_ANYWHERE
+            sort_column: IS_SEASON_LAUNCHED_ANYWHERE
+
+          - unique_name: d_season_has_first_run_rights_anywhere
+            label: Season Has First Run Rights Anywhere
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_HAS_FIRST_RUN_RIGHTS_ANYWHERE
+            key_columns:
+              - SEASON_HAS_FIRST_RUN_RIGHTS_ANYWHERE
+            sort_column: SEASON_HAS_FIRST_RUN_RIGHTS_ANYWHERE
+
+          - unique_name: d_season_is_branded_anywhere
+            label: Season Is Branded Anywhere
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_IS_BRANDED_ANYWHERE
+            key_columns:
+              - SEASON_IS_BRANDED_ANYWHERE
+            sort_column: SEASON_IS_BRANDED_ANYWHERE
+
+          - unique_name: d_season_is_branded_everywhere
+            label: Season Is Branded Everywhere
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_IS_BRANDED_EVERYWHERE
+            key_columns:
+              - SEASON_IS_BRANDED_EVERYWHERE
+            sort_column: SEASON_IS_BRANDED_EVERYWHERE
+
+          - unique_name: d_season_ownership_code
+            label: Season Ownership Code
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_OWNERSHIP_CODE
+            key_columns:
+              - SEASON_OWNERSHIP_CODE
+            sort_column: SEASON_OWNERSHIP_CODE
+
+          - unique_name: d_season_primary_market_code
+            label: Season Primary Market Code
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_PRIMARY_MARKET_CODE
+            key_columns:
+              - SEASON_PRIMARY_MARKET_CODE
+            sort_column: SEASON_PRIMARY_MARKET_CODE
+
+          - unique_name: d_season_primary_market_desc
+            label: Season Primary Market Description
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_PRIMARY_MARKET_DESC
+            key_columns:
+              - SEASON_PRIMARY_MARKET_DESC
+            sort_column: SEASON_PRIMARY_MARKET_DESC
+
+          - unique_name: d_season_resolved_content_runtime_secs
+            label: Season Resolved Content Runtme Secs
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_RESOLVED_CONTENT_RUNTIME_SECS
+            key_columns:
+              - SEASON_RESOLVED_CONTENT_RUNTIME_SECS
+            sort_column: SEASON_RESOLVED_CONTENT_RUNTIME_SECS
+
+          - unique_name: d_season_resolved_episode_cnt
+            label: Season Resolved Episode Count
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_RESOLVED_EPISODE_CNT
+            key_columns:
+              - SEASON_RESOLVED_EPISODE_CNT
+            sort_column: SEASON_RESOLVED_EPISODE_CNT
+
+          - unique_name: d_season_resolved_runtime_secs
+            label: Season Resolved Runtime Secs
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_RESOLVED_RUNTIME_SECS
+            key_columns:
+              - SEASON_RESOLVED_RUNTIME_SECS
+            sort_column: SEASON_RESOLVED_RUNTIME_SECS
+
+          - unique_name: d_season_resolved_sequence_nbr
+            label: Season Resolved Sequence Number
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_RESOLVED_SEQUENCE_NBR
+            key_columns:
+              - SEASON_RESOLVED_SEQUENCE_NBR
+            sort_column: SEASON_RESOLVED_SEQUENCE_NBR
+
+        aliases:
+
+          - unique_name: d_SEASON_DESC
+            label: Season Desc
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_DESC
+            sort_column: SEASON_DESC
+
+          - unique_name: d_SEASON_ID
+            label: Season ID
+            folder: Content - Season Attributes
+            dataset: SEASON_D
+            name_column: SEASON_ID
+            sort_column: SEASON_ID
+
+      - unique_name: batch
+
+        secondary_attributes:
+
+          - unique_name: d_BATCH_DESC
+            label: Batch Desc
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_DESC
+            key_columns:
+              - BATCH_DESC
+            sort_column: BATCH_DESC
+
+          - unique_name: d_batch_resolved_content_runtime_secs
+            label: Batch Resolved Content Runtime Secs
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_RESOLVED_CONTENT_RUNTIME_SECS
+            key_columns:
+              - BATCH_RESOLVED_CONTENT_RUNTIME_SECS
+            sort_column: BATCH_RESOLVED_CONTENT_RUNTIME_SECS
+
+          - unique_name: d_batch_resolved_episode_cnt
+            label: Batch Resolved Episode Count
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_RESOLVED_EPISODE_CNT
+            key_columns:
+              - BATCH_RESOLVED_EPISODE_CNT
+            sort_column: BATCH_RESOLVED_EPISODE_CNT
+
+          - unique_name: d_batch_resolved_runtime_secs
+            label: Batch Resolved Runtime Secs
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_RESOLVED_RUNTIME_SECS
+            key_columns:
+              - BATCH_RESOLVED_RUNTIME_SECS
+            sort_column: BATCH_RESOLVED_RUNTIME_SECS
+
+          - unique_name: d_batch_resolved_sequence_nbr
+            label: Batch Resolved Sequence Number
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_RESOLVED_SEQUENCE_NBR
+            key_columns:
+              - BATCH_RESOLVED_SEQUENCE_NBR
+            sort_column: BATCH_RESOLVED_SEQUENCE_NBR
+
+          - unique_name: d_batch_type_code
+            label: Batch Type Code
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_TYPE_CODE
+            key_columns:
+              - BATCH_TYPE_CODE
+            sort_column: BATCH_TYPE_CODE
+
+          - unique_name: d_is_batch_launched_anywhere
+            label: Is Batch Launched Anywhere
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: IS_BATCH_LAUNCHED_ANYWHERE
+            key_columns:
+              - IS_BATCH_LAUNCHED_ANYWHERE
+            sort_column: IS_BATCH_LAUNCHED_ANYWHERE
+
+          - unique_name: d_is_launch_batched_in_product
+            label: Is Launch Batched In Product
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: IS_LAUNCH_BATCHED_IN_PRODUCT
+            key_columns:
+              - IS_LAUNCH_BATCHED_IN_PRODUCT
+            sort_column: IS_LAUNCH_BATCHED_IN_PRODUCT
+
+        aliases:
+
+          - unique_name: d_BATCH_ID
+            label: Batch ID
+            folder: Content - Batch Attributes
+            dataset: BATCH_D
+            name_column: BATCH_ID
+            sort_column: BATCH_ID
+
+      - unique_name: title
+
+        secondary_attributes:
+
+          - unique_name: d_is_title_launched_anywhere
+            label: Is Title Launched Anywhere
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: IS_TITLE_LAUNCHED_ANYWHERE
+            key_columns:
+              - IS_TITLE_LAUNCHED_ANYWHERE
+            sort_column: IS_TITLE_LAUNCHED_ANYWHERE
+
+          - unique_name: d_TITLE_DESC_2
+            label: Title Desc
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: TITLE_DESC
+            key_columns:
+              - TITLE_DESC
+            sort_column: TITLE_DESC
+
+          - unique_name: d_title_product_display_runtime_secs
+            label: Title Product Display Run Time Secs
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: TITLE_PRODUCT_DISPLAY_RUNTIME_SECS
+            key_columns:
+              - TITLE_PRODUCT_DISPLAY_RUNTIME_SECS
+            sort_column: TITLE_PRODUCT_DISPLAY_RUNTIME_SECS
+
+          - unique_name: d_title_resolved_default_display_sequence_nbr
+            label: Title Resolved Default Display Sequence Number
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: TITLE_RESOLVED_DEFAULT_DISPLAY_SEQUENCE_NBR
+            key_columns:
+              - TITLE_RESOLVED_DEFAULT_DISPLAY_SEQUENCE_NBR
+            sort_column: TITLE_RESOLVED_DEFAULT_DISPLAY_SEQUENCE_NBR
+
+          - unique_name: d_title_type_code
+            label: Title Type Code
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: TITLE_TYPE_CODE
+            key_columns:
+              - TITLE_TYPE_CODE
+            sort_column: TITLE_TYPE_CODE
+
+        aliases:
+
+          - unique_name: d_TITLE_DESC
+            label: Title ID
+            folder: Content - Title Attributes
+            dataset: TITLE_D
+            name_column: TITLE_ID
+            sort_column: TITLE_ID
+
+level_attributes:
+
+  - unique_name: batch
+    label: Batch
+    is_unique_key: true
+    dataset: BATCH_D
+    name_column: BATCH_ID
+    key_columns:
+      - BATCH_ID
+
+  - unique_name: season
+    label: Season
+    dataset: SEASON_D
+    name_column: SEASON_ID
+    key_columns:
+      - SEASON_ID
+
+  - unique_name: show
+    label: 'Show '
+    is_unique_key: true
+    dataset: SHOW_D
+    name_column: SHOW_ID
+    key_columns:
+      - SHOW_ID
+
+  - unique_name: title
+    label: Title
+    is_unique_key: true
+    dataset: TITLE_D
+    name_column: TITLE_ID
+    key_columns:
+      - TITLE_ID
+
+relationships:
+
+  - unique_name: Content_Date_BatchGlobal-FirstActualLaunchRegion
+    from:
+      hierarchy: Content
+      level: batch
+      dataset: BATCH_D
+      join_columns:
+        - BATCH_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Batch Global - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_Date_BatchGlobal-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content
+      level: batch
+      dataset: BATCH_D
+      join_columns:
+        - BATCH_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Batch Global - First Planned Launch Region {0}"
+    type: embedded
+
+  - from:
+      dataset: BATCH_D
+      join_columns:
+        - SEASON_ID
+    to:
+      level: season
+    type: snowflake
+
+  - unique_name: Content_BuyingTeam_SeasonGlobalResolved
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_RESOLVED_BUYING_TEAM_ID
+    to:
+      dimension: Buying Team
+      level: Buying Team
+    role_play: "Season Global Resolved {0}"
+    type: embedded
+
+  - unique_name: Content_Date_SeasonGlobal-FirstActualLaunchRegion
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Season Global - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_Date_SeasonGlobal-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Season Global - First Planned Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_PEFCategory_SeasonBroad
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_BROAD_PEF_CATEGORY_ID
+    to:
+      dimension: PEF Category
+      level: PEF Category
+    role_play: "Season Broad {0}"
+    type: embedded
+
+  - unique_name: Content_PEFCategory_SeasonNarrow
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_NARROW_PEF_CATEGORY_ID
+    to:
+      dimension: PEF Category
+      level: PEF Category
+    role_play: "Season Narrow {0}"
+    type: embedded
+
+  - unique_name: Content_PEFCategory_SeasonPrimary
+    from:
+      hierarchy: Content
+      level: season
+      dataset: SEASON_D
+      join_columns:
+        - SEASON_PRIMARY_PEF_CATEGORY_ID
+    to:
+      dimension: PEF Category
+      level: PEF Category
+    role_play: "Season Primary {0}"
+    type: embedded
+
+  - from:
+      dataset: SEASON_D
+      join_columns:
+        - SHOW_ID
+    to:
+      level: show
+    type: snowflake
+
+  - unique_name: Content_BuyingTeam_ShowGlobalResolved
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_RESOLVED_BUYING_TEAM_ID
+    to:
+      dimension: Buying Team
+      level: Buying Team
+    role_play: "Show Global Resolved {0}"
+    type: embedded
+
+  - unique_name: Content_Geo_ShowOrigin-
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_ORIGIN_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+    role_play: "Show Origin - {0}"
+    type: embedded
+
+  - unique_name: Content_ContentCategory_Show
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_CONTENT_CATEGORY_ID
+    to:
+      dimension: Content Category
+      level: content_category
+    role_play: "Show {0}"
+    type: embedded
+
+  - unique_name: Content_Date_ShowGlobal-FirstActualLaunchRegion
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Show Global - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_Date_ShowGlobal-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Show Global - First Planned Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_ProgammingCategory_Show
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_PROGRAMMING_CATEGORY_ID
+    to:
+      dimension: Progamming Category
+      level: progamming_category
+    role_play: "Show {0}"
+    type: embedded
+
+  - unique_name: Content_Language_ShowOriginal
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_ORIGINAL_LANGUAGE_ID
+    to:
+      dimension: Language
+      level: language
+    role_play: "Show Original {0}"
+    type: embedded
+
+  - unique_name: Content_AnalyticGenre_Show
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_ANALYTIC_GENRE_ID
+    to:
+      dimension: Analytic Genre
+      level: Analytic Genre
+    role_play: "Show {0}"
+    type: embedded
+
+  - unique_name: Content_ContentType_Show
+    from:
+      hierarchy: Content
+      level: show
+      dataset: SHOW_D
+      join_columns:
+        - SHOW_CONTENT_TYPE_ID
+    to:
+      dimension: Content Type
+      level: Content Type
+    role_play: "Show {0}"
+    type: embedded
+
+  - unique_name: Content_Date_TitleGlobal-FirstActualLaunchRegion
+    from:
+      hierarchy: Content
+      level: title
+      dataset: TITLE_D
+      join_columns:
+        - TITLE_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Title Global - First Actual Launch Region {0}"
+    type: embedded
+
+  - unique_name: Content_Date_TitleGlobal-FirstPlannedLaunchRegion
+    from:
+      hierarchy: Content
+      level: title
+      dataset: TITLE_D
+      join_columns:
+        - TITLE_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+    role_play: "Title Global - First Planned Launch Region {0}"
+    type: embedded
+
+  - from:
+      dataset: TITLE_D
+      join_columns:
+        - BATCH_ID
+    to:
+      level: batch
+    type: snowflake

@@ -1,0 +1,53 @@
+unique_name: SEASON_D
+object_type: dataset
+label: SEASON_D
+connection_id: DSE
+table: SEASON_D
+
+columns:
+  - name: IS_SEASON_EPISODE_CNT_SAME_GLOBALLY
+    data_type: "decimal(38,0)"
+  - name: IS_SEASON_LAUNCHED_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: SEASON_BROAD_PEF_CATEGORY_ID
+    data_type: string
+  - name: SEASON_DESC
+    data_type: string
+  - name: SEASON_GLOBAL_FIRST_ACTUAL_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SEASON_GLOBAL_FIRST_PLANNED_LAUNCH_REGION_DATE_ID
+    data_type: date
+  - name: SEASON_HAS_FIRST_RUN_RIGHTS_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: SEASON_ID
+    data_type: "decimal(38,0)"
+  - name: SEASON_IS_BRANDED_ANYWHERE
+    data_type: "decimal(38,0)"
+  - name: SEASON_IS_BRANDED_EVERYWHERE
+    data_type: "decimal(38,0)"
+  - name: SEASON_NARROW_PEF_CATEGORY_ID
+    data_type: string
+  - name: SEASON_ORIGIN_COUNTRY_ID
+    data_type: string
+  - name: SEASON_OWNERSHIP_CODE
+    data_type: string
+  - name: SEASON_PRIMARY_MARKET_CODE
+    data_type: string
+  - name: SEASON_PRIMARY_MARKET_DESC
+    data_type: string
+  - name: SEASON_PRIMARY_PEF_CATEGORY_ID
+    data_type: string
+  - name: SEASON_RESOLVED_BUYING_TEAM_ID
+    data_type: "decimal(38,0)"
+  - name: SEASON_RESOLVED_CONTENT_RUNTIME_SECS
+    data_type: "decimal(38,0)"
+  - name: SEASON_RESOLVED_EPISODE_CNT
+    data_type: "decimal(38,0)"
+  - name: SEASON_RESOLVED_RUNTIME_SECS
+    data_type: "decimal(38,0)"
+  - name: SEASON_RESOLVED_SEQUENCE_NBR
+    data_type: "decimal(38,0)"
+  - name: SEASON_TYPE_CODE
+    data_type: string
+  - name: SHOW_ID
+    data_type: "decimal(38,0)"

@@ -1,0 +1,15 @@
+unique_name: YEAR_QUARTER_D
+object_type: dataset
+label: YEAR_QUARTER_D
+connection_id: DSE
+table: YEAR_QUARTER_D
+
+columns:
+  - name: QUARTER_NAME_OF_YEAR
+    data_type: string
+  - name: YEAR_ID
+    data_type: "decimal(38,0)"
+  - name: YEAR_QUARTER_DESC
+    data_type: string
+  - name: YEAR_QUARTER_ID
+    data_type: string

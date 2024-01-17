@@ -1,0 +1,37 @@
+unique_name: DATE_D
+object_type: dataset
+label: DATE_D
+connection_id: DSE
+table: DATE_D
+
+columns:
+  - name: DATE_DESC
+    data_type: "decimal(38,0)"
+  - name: DATE_ID
+    data_type: date
+  - name: FRI_TO_THU_WK_END_DATE_ID
+    data_type: date
+  - name: MON_TO_SUN_WK_END_DATE_ID
+    data_type: date
+  - name: NEXT_DATE_ID
+    data_type: date
+  - name: PREVIOUS_DATE_ID
+    data_type: date
+  - name: SAT_TO_FRI_WK_END_DATE_ID
+    data_type: date
+  - name: SUN_TO_SAT_WK_END_DATE_ID
+    data_type: date
+  - name: THU_TO_WED_WK_END_DATE_ID
+    data_type: date
+  - name: TUE_TO_MON_WK_END_DATE_ID
+    data_type: date
+  - name: WED_TO_TUE_WK_END_DATE_ID
+    data_type: date
+  - name: YEAR_ID
+    data_type: "decimal(38,0)"
+  - name: YEAR_MONTH_ID
+    data_type: "decimal(38,0)"
+  - name: YEAR_QUARTER_ID
+    data_type: string
+  - name: YEAR_WEEK_ID
+    data_type: string

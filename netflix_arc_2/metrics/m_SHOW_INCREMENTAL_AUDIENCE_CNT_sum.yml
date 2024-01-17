@@ -1,0 +1,6 @@
+unique_name: m_SHOW_INCREMENTAL_AUDIENCE_CNT_sum
+object_type: metric
+label: Show Audience Count
+calculation_method: sum
+dataset: CONTENT_FUNNEL_SHOW_SUM
+column: SHOW_INCREMENTAL_AUDIENCE_CNT

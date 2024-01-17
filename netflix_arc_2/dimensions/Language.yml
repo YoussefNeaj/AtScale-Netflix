@@ -1,0 +1,36 @@
+unique_name: Language
+object_type: dimension
+label: Language
+type: standard
+
+hierarchies:
+
+  - unique_name: Language Hierarchy
+    label: Language
+    folder: Core - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: language
+
+        secondary_attributes:
+
+          - unique_name: d_LANGUAGE_DESC
+            label: Language Desc
+            folder: Core - Language
+            dataset: LANGUAGE_D
+            name_column: LANGUAGE_DESC
+            key_columns:
+              - LANGUAGE_DESC
+            sort_column: LANGUAGE_DESC
+
+level_attributes:
+
+  - unique_name: language
+    label: Language
+    is_unique_key: true
+    dataset: LANGUAGE_D
+    name_column: LANGUAGE_ID
+    key_columns:
+      - LANGUAGE_ID

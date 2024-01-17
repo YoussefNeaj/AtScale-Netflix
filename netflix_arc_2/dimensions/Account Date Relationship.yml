@@ -1,0 +1,132 @@
+unique_name: Account Date Relationship
+object_type: dimension
+label: Account Date Relationship
+type: standard
+
+hierarchies:
+
+  - unique_name: Account Date Relationship
+    label: Account Date Relationship
+    folder: Customer - Hierarchy
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Account Date Relationship
+        is_hidden: true
+
+        secondary_attributes:
+
+          - unique_name: d_as_was_account_service_days
+            label: As Was Account Service Days
+            folder: Customer - Service Attributes
+            dataset: ACCOUNT_DATE_R
+            name_column: AS_WAS_ACCOUNT_SERVICE_DAY_CNT
+            key_columns:
+              - AS_WAS_ACCOUNT_SERVICE_DAY_CNT
+            sort_column: AS_WAS_ACCOUNT_SERVICE_DAY_CNT
+
+          - unique_name: d_as_was_can_stream
+            label: As Was Can Stream
+            folder: Customer - Service Attributes
+            dataset: ACCOUNT_DATE_R
+            name_column: AS_WAS_CAN_STREAM
+            key_columns:
+              - AS_WAS_CAN_STREAM
+            sort_column: AS_WAS_CAN_STREAM
+
+          - unique_name: d_as_was_in_paid_member_count
+            label: As Was In Paid Member Count
+            folder: Customer - Service Attributes
+            dataset: ACCOUNT_DATE_R
+            name_column: AS_WAS_IN_PAID_MEMBER_CNT
+            key_columns:
+              - AS_WAS_IN_PAID_MEMBER_CNT
+            sort_column: AS_WAS_IN_PAID_MEMBER_CNT
+
+          - unique_name: d_as_was_subscrn_service_days
+            label: As Was Subscription Service Days
+            folder: Customer - Service Attributes
+            dataset: ACCOUNT_DATE_R
+            name_column: AS_WAS_SUBSCRN_SERVICE_DAY_CNT
+            key_columns:
+              - AS_WAS_SUBSCRN_SERVICE_DAY_CNT
+            sort_column: AS_WAS_SUBSCRN_SERVICE_DAY_CNT
+
+level_attributes:
+
+  - unique_name: Account Date Relationship
+    label: Account Date Relationship
+    is_hidden: true
+    dataset: ACCOUNT_DATE_R
+    name_column: REGION_DATE_ID
+    key_columns:
+      - ACCOUNT_ID
+      - REGION_DATE_ID
+
+relationships:
+
+  - unique_name: AccountDateRelationship_Geo_Signup-
+    from:
+      hierarchy: Account Date Relationship
+      level: Account Date Relationship
+      dataset: ACCOUNT_DATE_R
+      join_columns:
+        - AS_WAS_SIGNUP_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+    role_play: "Signup - {0}"
+    type: embedded
+
+  - unique_name: AccountDateRelationship_Plan_AccountAsWasStreaming
+    from:
+      hierarchy: Account Date Relationship
+      level: Account Date Relationship
+      dataset: ACCOUNT_DATE_R
+      join_columns:
+        - AS_WAS_STREAMING_PLAN_ROLLUP_ID
+    to:
+      dimension: Plan
+      level: plan_roll_up
+    role_play: "Account As Was Streaming {0}"
+    type: embedded
+
+  - unique_name: AccountDateRelationship_Plan_AccountAsWasPaying
+    from:
+      hierarchy: Account Date Relationship
+      level: Account Date Relationship
+      dataset: ACCOUNT_DATE_R
+      join_columns:
+        - AS_WAS_PAYING_PLAN_ROLLUP_ID
+    to:
+      dimension: Plan
+      level: plan_roll_up
+    role_play: "Account As Was Paying {0}"
+    type: embedded
+
+  - unique_name: AccountDateRelationship_Customer_AsWasSubscription-
+    from:
+      hierarchy: Account Date Relationship
+      level: Account Date Relationship
+      dataset: ACCOUNT_DATE_R
+      join_columns:
+        - AS_WAS_SUBSCRN_ID
+    to:
+      dimension: Customer
+      level: Subscription
+    role_play: "As Was Subscription - {0}"
+    type: embedded
+
+  - unique_name: AccountDateRelationship_BillingPartner_AsWas-
+    from:
+      hierarchy: Account Date Relationship
+      level: Account Date Relationship
+      dataset: ACCOUNT_DATE_R
+      join_columns:
+        - AS_WAS_BILLING_PARTNER_ID
+    to:
+      dimension: Billing Partner
+      level: Billing Partner
+    role_play: "As Was - {0}"
+    type: embedded

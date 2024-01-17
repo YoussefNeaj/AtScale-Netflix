@@ -1,0 +1,487 @@
+unique_name: ARC-Title
+object_type: model
+label: ARC-Title
+include_default_drillthrough: true
+
+relationships:
+
+  - unique_name: CONTENT_FUNNEL_TITLE_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_SUM
+      join_columns:
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_TITLE_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_TITLE_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_SUM
+      join_columns:
+        - TITLE_ID
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: title_country
+
+  - unique_name: CONTENT_FUNNEL_TITLE_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_SUM
+      join_columns:
+        - TITLE_ID
+        - TITLE_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Title Country Date
+
+  - unique_name: CONTENT_FUNNEL_TITLE_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_TITLE_SUM
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+
+  - unique_name: CONTENT_MONTHLY_EXPENSE_F_Date
+    from:
+      dataset: CONTENT_MONTHLY_EXPENSE_F
+      join_columns:
+        - YEAR_MONTH_ID
+    to:
+      dimension: Date
+      level: month
+
+  - unique_name: CONTENT_MONTHLY_EXPENSE_F_Content
+    from:
+      dataset: CONTENT_MONTHLY_EXPENSE_F
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+
+  - unique_name: CONTENT_MONTHLY_EXPENSE_F_Geo
+    from:
+      dataset: CONTENT_MONTHLY_EXPENSE_F
+      join_columns:
+        - FINANCE_SUBREGION_ID
+    to:
+      dimension: Geo
+      level: finance_subregion
+
+  - unique_name: CONTENT_MONTHLY_EXPENSE_F_Title_Deal_Window
+    from:
+      dataset: CONTENT_MONTHLY_EXPENSE_F
+      join_columns:
+        - TITLE_DEAL_WINDOW_ID
+    to:
+      dimension: Title Deal Window
+      level: title_deal_window
+
+  - unique_name: CONTENT_FUNNEL_SHOW_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_SUM
+      join_columns:
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_SHOW_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_SUM
+      join_columns:
+        - SHOW_ID
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Show Country Date
+
+  - unique_name: CONTENT_FUNNEL_SHOW_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_SHOW_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_SUM
+      join_columns:
+        - SHOW_ID
+        - SHOW_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: show_country
+
+  - unique_name: CONTENT_FUNNEL_SHOW_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_SHOW_SUM
+      join_columns:
+        - SHOW_ID
+    to:
+      dimension: Content
+      level: show
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Geo
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - SIGNUP_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Date
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - SIGNUP_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content_Country_Relationship
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+        - SIGNUP_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: batch_country
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+    to:
+      dimension: Content
+      level: batch
+
+  - unique_name: CONTENT_EIA_ESTIMATE_F_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_EIA_ESTIMATE_F
+      join_columns:
+        - BATCH_ID
+        - SIGNUP_COUNTRY_ID
+        - SIGNUP_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Batch Country Date
+
+  - unique_name: CONTENT_FUNNEL_BATCH_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_SUM
+      join_columns:
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_BATCH_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_BATCH_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_SUM
+      join_columns:
+        - BATCH_ID
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: batch_country
+
+  - unique_name: CONTENT_FUNNEL_BATCH_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_SUM
+      join_columns:
+        - BATCH_ID
+    to:
+      dimension: Content
+      level: batch
+
+  - unique_name: CONTENT_FUNNEL_BATCH_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_BATCH_SUM
+      join_columns:
+        - BATCH_ID
+        - BATCH_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Batch Country Date
+
+  - unique_name: CONTENT_FUNNEL_SEASON_SUM_Geo
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_SUM
+      join_columns:
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: CONTENT_FUNNEL_SEASON_SUM_Date
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_SUM
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: CONTENT_FUNNEL_SEASON_SUM_Content_Country_Date_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_SUM
+      join_columns:
+        - SEASON_ID
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Season Country Date
+
+  - unique_name: CONTENT_FUNNEL_SEASON_SUM_Content_Country_Relationship
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_SUM
+      join_columns:
+        - SEASON_ID
+        - SEASON_FIRST_PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: season_country
+
+  - unique_name: CONTENT_FUNNEL_SEASON_SUM_Content
+    from:
+      dataset: CONTENT_FUNNEL_SEASON_SUM
+      join_columns:
+        - SEASON_ID
+    to:
+      dimension: Content
+      level: season
+
+  - unique_name: PLAYBACK_TITLE_AGG_Geo
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Geo
+      level: country
+
+  - unique_name: PLAYBACK_TITLE_AGG_Date
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Date
+      level: date
+
+  - unique_name: PLAYBACK_TITLE_AGG_Content_Country_Relationship
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - TITLE_ID
+        - PLAYBACK_COUNTRY_ID
+    to:
+      dimension: Content Country Relationship
+      level: title_country
+
+  - unique_name: PLAYBACK_TITLE_AGG_Content_Country_Date_Relationship
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - TITLE_ID
+        - PLAYBACK_COUNTRY_ID
+        - PLAYBACK_REGION_DATE_ID
+    to:
+      dimension: Content Country Date Relationship
+      level: Title Country Date
+
+  - unique_name: PLAYBACK_TITLE_AGG_Content
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - TITLE_ID
+    to:
+      dimension: Content
+      level: title
+
+  - unique_name: PLAYBACK_TITLE_AGG_Title_Deal_Window
+    from:
+      dataset: PLAYBACK_TITLE_AGG
+      join_columns:
+        - DEAL_ATTRIBUTE_ID
+    to:
+      dimension: Title Deal Window
+      level: title_deal_window
+
+dimensions:
+  - Batch Age Days
+  - Is Cached Playback
+  - Membership Type
+  - Season Age Days
+  - Show Age Days
+  - Title Age Days
+
+metrics:
+
+  - unique_name: m_avs_vote_amt_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_CUME_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_CUME_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_CUME_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_CUME_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_INCREMENTAL_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_BATCH_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_boosted_sqpd_vote_amt_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_content_view_secs_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_DAYS_SINCE_BATCH_COUNTRY_LAUNCH_max
+    folder: Content - Batch Attributes
+
+  - unique_name: m_DAYS_SINCE_SEASON_COUNTRY_LAUNCH_max
+    folder: Content - Season Attributes
+
+  - unique_name: m_DAYS_SINCE_SHOW_COUNTRY_LAUNCH_max
+    folder: Content - Show Attributes
+
+  - unique_name: m_DAYS_SINCE_TITLE_COUNTRY_LAUNCH_max
+    folder: Content - Title Attributes
+
+  - unique_name: m_EIA_ESTIMATE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_NORM_2WEEK_SQPD_VOTE_AMT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_p1_avs_vote_amt_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_PRIMARY_EXPENSE_USD_AMT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_CUME_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_CUME_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_CUME_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_CUME_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_INCREMENTAL_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SEASON_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_CUME_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_CUME_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_CUME_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_CUME_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_INCREMENTAL_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_SHOW_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_sqpd_vote_amt_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_CUME_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_CUME_COMPLETER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_CUME_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_CUME_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_INCREMENTAL_AUDIENCE_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_STARTER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: m_TITLE_STICKER_CNT_sum
+    folder: Content Performance Metrics
+
+  - unique_name: Efficiency
+
+  - unique_name: avs_pct_region
+
+  - unique_name: cost_pct_region

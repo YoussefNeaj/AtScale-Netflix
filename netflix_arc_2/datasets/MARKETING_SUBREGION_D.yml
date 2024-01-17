@@ -1,0 +1,13 @@
+unique_name: MARKETING_SUBREGION_D
+object_type: dataset
+label: MARKETING_SUBREGION_D
+connection_id: DSE
+table: MARKETING_SUBREGION_D
+
+columns:
+  - name: MARKETING_REGION_ID
+    data_type: "decimal(38,0)"
+  - name: MARKETING_SUBREGION_DESC
+    data_type: string
+  - name: MARKETING_SUBREGION_ID
+    data_type: "decimal(38,0)"

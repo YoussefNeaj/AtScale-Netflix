@@ -1,0 +1,37 @@
+unique_name: TITLE_COUNTRY_DATE_R
+object_type: dataset
+label: TITLE_COUNTRY_DATE_R
+connection_id: DSE
+table: TITLE_COUNTRY_DATE_R
+
+columns:
+  - name: AS_WAS_DAYS_SINCE_TITLE_COUNTRY_LAUNCH
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_IS_FIRST_TITLE_COUNTRY_WINDOW
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_IS_LATEST_TITLE_COUNTRY_WINDOW
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_IS_TITLE_COUNTRY_WINDOW_CONFIRMED
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_IS_TITLE_COUNTRY_WINDOW_ON_HOLD
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_IS_UPCOMING_TITLE_COUNTRY_WINDOW
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_TITLE_COUNTRY_WINDOW_END_REGION_DATE_ID
+    data_type: date
+  - name: AS_WAS_TITLE_COUNTRY_WINDOW_NBR
+    data_type: "decimal(38,0)"
+  - name: AS_WAS_TITLE_COUNTRY_WINDOW_START_REGION_DATE_ID
+    data_type: date
+  - name: BATCH_ID
+    data_type: "decimal(38,0)"
+  - name: COUNTRY_ID
+    data_type: string
+  - name: REGION_DATE_ID
+    data_type: date
+  - name: SEASON_ID
+    data_type: "decimal(38,0)"
+  - name: SHOW_ID
+    data_type: "decimal(38,0)"
+  - name: TITLE_ID
+    data_type: "decimal(38,0)"
